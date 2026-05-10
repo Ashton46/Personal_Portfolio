@@ -14,9 +14,9 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "Ashton Breer | Creative Coder Portfolio",
+  title: "Ashton Breer",
   description:
-    "A creative coder room portfolio for Ashton Breer, UC Irvine computer science student building with AI, automation, and web tech."
+    "Portfolio of Ashton Breer, a UC Irvine Computer Science student continuing to develop, learn, and build software."
 };
 
 export default function RootLayout({ children }) {
