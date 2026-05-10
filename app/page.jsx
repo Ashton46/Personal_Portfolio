@@ -410,7 +410,7 @@ function Hero({ onOpenBot }) {
         </p>
         <div className="mt-12 flex flex-wrap gap-4">
           <a className="minimal-button" href={emailHref}>
-            <span className="text-aqua">✉</span> Say hi!
+            <span className="text-aqua">✉</span> Let’s chat
           </a>
         </div>
       </motion.div>
