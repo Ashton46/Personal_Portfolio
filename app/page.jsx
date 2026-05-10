@@ -7,7 +7,7 @@ const navItems = ["Home", "About", "Experience", "Projects", "Contact"];
 const resumeHref = "/Resume.pdf";
 const emailHref = "mailto:ashtonbreer@yahoo.com";
 const githubHref = "https://github.com/Ashton46";
-const linkedInHref = "https://www.linkedin.com/in/ashton-breer-040089277/";
+const linkedInHref = "https://www.linkedin.com/in/ashtonbreer/";
 
 const projects = [
   {
