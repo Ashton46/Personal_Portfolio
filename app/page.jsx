@@ -12,6 +12,8 @@ const linkedInHref = "https://www.linkedin.com/in/ashtonbreer/";
 const projects = [
   {
     title: "AI Sports Play Prediction Platform",
+    type: "sports ml",
+    mark: "XP",
     description:
       "A full-stack analytics platform for exploring sports data, prediction signals, and game-state context.",
     date: "August 2025 - Present",
@@ -24,6 +26,8 @@ const projects = [
   },
   {
     title: "K-Nearest Neighbors Classifier",
+    type: "classifier",
+    mark: "KNN",
     description:
       "A Python machine learning project for geographic temperature classification using KNN.",
     date: "February - March 2025",
@@ -36,6 +40,8 @@ const projects = [
   },
   {
     title: "Minesweeper AI Agent",
+    type: "ai agent",
+    mark: "AI",
     description:
       "A reasoning-focused AI project that evaluates board state, risk, and search strategy.",
     date: "Project",
@@ -553,15 +559,16 @@ function Projects() {
               whileTap={{ scale: 0.98 }}
               transition={{ type: "spring", stiffness: 260, damping: 22 }}
             >
-              <div className="mb-8 h-24 rounded-2xl border border-aqua/22 bg-[radial-gradient(circle_at_30%_40%,rgba(122,247,244,0.22),transparent_36%)] p-4">
-                <div className="flex items-center justify-between">
-                  <div className="h-2 w-20 rounded-full bg-aqua" />
-                  <span className="font-display text-xs font-bold text-aqua">
-                    0{index + 1}
-                  </span>
+              <div className="mb-8 flex h-24 items-center justify-between rounded-2xl border border-aqua/22 bg-aqua/[0.035] px-5">
+                <div>
+                  <p className="font-display text-xs font-bold uppercase tracking-[0.24em] text-aqua">
+                    {project.type}
+                  </p>
+                  <p className="mt-2 text-sm text-lavender">{project.date}</p>
                 </div>
-                <div className="mt-4 h-2 w-32 rounded-full bg-white/18" />
-                <div className="mt-3 h-2 w-24 rounded-full bg-white/12" />
+                <div className="grid h-14 w-14 place-items-center rounded-2xl border border-aqua/35 font-display text-lg font-bold text-aqua">
+                  {project.mark}
+                </div>
               </div>
               <h3 className="font-display text-2xl font-bold leading-tight text-white">
                 {project.title}
@@ -660,7 +667,7 @@ function Contact() {
       <div className="flex flex-col justify-between gap-8 rounded-3xl border border-white/14 p-8 sm:flex-row sm:items-center">
         <div>
           <h3 className="font-display text-4xl font-bold text-white">let’s build something.</h3>
-          <p className="mt-3 text-xl text-lavender">Open to internships, project chats, and software ideas.</p>
+          <p className="mt-3 text-xl text-lavender">Open to connecting, collaborating, and learning from new opportunities.</p>
         </div>
         <div className="flex flex-wrap gap-4">
           <a className="minimal-button" href={emailHref}>Email</a>
