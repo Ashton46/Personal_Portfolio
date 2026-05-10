@@ -667,7 +667,7 @@ function Contact() {
       <div className="flex flex-col justify-between gap-8 rounded-3xl border border-white/14 p-8 sm:flex-row sm:items-center">
         <div>
           <h3 className="font-display text-4xl font-bold text-white">let’s build something.</h3>
-          <p className="mt-3 text-xl text-lavender">Open to connecting, collaborating, and learning from new opportunities.</p>
+          <p className="mt-3 text-xl text-lavender">Open to connecting!</p>
         </div>
         <div className="flex flex-wrap gap-4">
           <a className="minimal-button" href={emailHref}>Email</a>

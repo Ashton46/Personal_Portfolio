@@ -13,7 +13,7 @@ module.exports = {
       colors: {
         ink: "#070911",
         navy: "#132946",
-        aqua: "#7af7f4",
+        aqua: "#9cc9e6",
         lavender: "#c3cce8",
         coal: "#0d1020",
         violet: "#8f5cff",
