@@ -58,12 +58,15 @@ const experience = [
   {
     company: "PACCAR",
     location: "Bellevue, Washington",
-    role: "Incoming Intern",
+    role: "Intern",
     date: "Summer 2026",
-    type: "Internship",
+    type: "Full-time",
     bullets: [
-      "Incoming internship focused on building software and automation tools for internal workflows.",
-      "Expected to apply computer science, problem-solving, and communication skills in a professional engineering environment."
+      "Developed Python automation solutions to drive process improvement and business process automation across Bill of Sale, contract, and purchase order workflows.",
+      "Built systems integrations using Power Automate, Snowflake, Salesforce, and DocuWare REST APIs to automate data validation, document retrieval, and cross-functional business processes.",
+      "Designed data pipelines and document-processing workflows to extract data from emails, Excel attachments, PDFs, and Word templates for automated document generation.",
+      "Improved operational efficiency by reducing manual data entry, increasing processing accuracy, and streamlining workflows across finance and operations teams.",
+      "Collaborated with cross-functional stakeholders to gather requirements, troubleshoot workflow issues, and support automation deployment and process optimization."
     ]
   },
   {
