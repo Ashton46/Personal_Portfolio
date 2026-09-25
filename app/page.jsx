@@ -95,7 +95,20 @@ const experience = [
   }
 ];
 
-const skills = ["Python", "C++", "JavaScript", "React", "Next.js", "FastAPI", "Git", "APIs"];
+const skills = [
+  "Python",
+  "SQL",
+  "C++",
+  "React",
+  "FastAPI",
+  "pandas",
+  "NumPy",
+  "REST APIs",
+  "Power Automate",
+  "Snowflake",
+  "Salesforce",
+  "Data Pipelines"
+];
 
 const quickPrompts = [
   "What projects has Ashton built?",
