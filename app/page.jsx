@@ -290,6 +290,9 @@ function AnimatedPortrait() {
           strokeWidth="7"
         >
           <circle cx="75" cy="28" r="18" />
+          <circle cx="68" cy="25" r="2.2" fill="currentColor" stroke="none" />
+          <circle cx="82" cy="25" r="2.2" fill="currentColor" stroke="none" />
+          <path d="M67 35 Q75 41 83 35" strokeWidth="3" />
           <path d="M75 49 L75 96" />
           <motion.path
             d="M75 63 L43 82"
