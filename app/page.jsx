@@ -111,21 +111,21 @@ const skills = [
 ];
 
 const quickPrompts = [
-  "What projects has Ashton built?",
-  "What technologies does Ashton use?",
-  "What is Ashton interested in?",
-  "Summarize Ashton’s resume."
+  "Summarize Ashton’s resume.",
+  "What did Ashton do at PACCAR?",
+  "What projects should I look at?",
+  "What technologies does Ashton use?"
 ];
 
 const botResponses = {
-  "What projects has Ashton built?":
-    "Ashton is showcasing an AI Sports Play Prediction Platform, a K-Nearest Neighbors Classifier, and a Minesweeper AI Agent.",
-  "What technologies does Ashton use?":
-    "Ashton works with Python, C++, JavaScript, React, Next.js, FastAPI, Git, APIs, and AI-focused tooling.",
-  "What is Ashton interested in?":
-    "Ashton is interested in software engineering, AI tools, automation, web technology, and practical project building.",
   "Summarize Ashton’s resume.":
-    "Ashton is a UC Irvine Computer Science student building software with AI, automation, and web tech while preparing for internships."
+    "Ashton Breer is a UC Irvine Computer Science student with experience building Python automation, systems integrations, data pipelines, and full-stack software projects.",
+  "What did Ashton do at PACCAR?":
+    "At PACCAR, Ashton developed Python automation for Bill of Sale, contract, and purchase order workflows. He also worked with Power Automate, Snowflake, Salesforce, and DocuWare REST APIs to automate validation, document retrieval, and business processes.",
+  "What projects should I look at?":
+    "Start with the AI Sports Play Prediction Platform for full-stack and ML work, then the K-Nearest Neighbors Classifier for machine learning fundamentals, and the Minesweeper AI Agent for algorithmic reasoning.",
+  "What technologies does Ashton use?":
+    "Ashton works with Python, SQL, C++, React, FastAPI, pandas, NumPy, REST APIs, Power Automate, Snowflake, Salesforce, and data pipeline tooling."
 };
 
 function scrollToId(id) {
@@ -705,14 +705,22 @@ function Contact() {
 
 function AshtonBot({ open, onOpen, onClose }) {
   const [messages, setMessages] = useState([
-    { role: "bot", text: "Ask me about Ashton’s projects, skills, experience, or resume." }
+    {
+      role: "bot",
+      text: "Hi, I’m AshtonBot. I can give a quick snapshot of Ashton’s resume, PACCAR work, projects, and technical skills."
+    }
   ]);
 
   function ask(prompt) {
     setMessages((items) => [
       ...items,
       { role: "user", text: prompt },
-      { role: "bot", text: botResponses[prompt] }
+      {
+        role: "bot",
+        text:
+          botResponses[prompt] ||
+          "I only have verified portfolio info right now, so I can answer best using the quick prompts below."
+      }
     ]);
   }
 
@@ -721,7 +729,7 @@ function AshtonBot({ open, onOpen, onClose }) {
       <button
         type="button"
         onClick={onOpen}
-        className="fixed bottom-6 right-6 z-50 rounded-2xl border border-aqua/70 bg-navy px-4 py-3 font-display font-bold text-aqua shadow-[0_0_28px_rgba(122,247,244,0.18)]"
+        className="fixed bottom-6 right-6 z-50 rounded-2xl border border-aqua/70 bg-navy px-4 py-3 font-display font-bold text-aqua shadow-[0_0_28px_rgba(156,201,230,0.18)]"
       >
         AshtonBot
       </button>
@@ -737,7 +745,7 @@ function AshtonBot({ open, onOpen, onClose }) {
               <div>
                 <h3 className="font-display text-2xl font-bold text-white">Ask AshtonBot</h3>
                 <p className="mt-1 text-sm leading-5 text-lavender">
-                  Ask me about Ashton’s projects, skills, experience, or resume.
+                  Quick answers about Ashton’s experience, projects, skills, and resume.
                 </p>
               </div>
               <button className="text-2xl text-white" onClick={onClose} aria-label="Close AshtonBot">
@@ -759,6 +767,9 @@ function AshtonBot({ open, onOpen, onClose }) {
               ))}
             </div>
             <div className="grid gap-2 border-t border-white/12 p-4">
+              <p className="font-display text-xs font-bold uppercase tracking-[0.2em] text-aqua">
+                Quick prompts
+              </p>
               {quickPrompts.map((prompt) => (
                 <button
                   key={prompt}
