@@ -15,9 +15,21 @@ const inter = Inter({
 });
 
 export const metadata = {
+  metadataBase: new URL("https://ashtonbreer.vercel.app"),
   title: "Ashton Breer",
   description:
-    "Portfolio of Ashton Breer, a UC Irvine Computer Science student continuing to develop, learn, and build software."
+    "Portfolio of Ashton Breer, a UC Irvine Computer Science student continuing to develop, learn, and build software.",
+  alternates: {
+    canonical: "/"
+  },
+  openGraph: {
+    title: "Ashton Breer",
+    description:
+      "Portfolio of Ashton Breer, a UC Irvine Computer Science student continuing to develop, learn, and build software.",
+    url: "https://ashtonbreer.vercel.app",
+    siteName: "Ashton Breer",
+    type: "website"
+  }
 };
 
 export default function RootLayout({ children }) {
